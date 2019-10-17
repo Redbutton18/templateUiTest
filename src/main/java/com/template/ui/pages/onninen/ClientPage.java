@@ -41,8 +41,7 @@ public class ClientPage extends BasePage{
         cityField.setValue("Wroclaw");
         phoneNumberField.setValue("1234567890");
         emailField.setValue("asd@yahoo.com");
-        sleep(4000);
-        acceptPersonalDataCheckbox.click();
+        acceptPersonalDataCheckbox.scrollTo().click();
         nextButton.click();
     }
 
@@ -55,7 +54,7 @@ public class ClientPage extends BasePage{
         addressField.setValue("Dolna 22");
         postCodeField.setValue("50-001");
         cityField.setValue("Wroclaw");
-        sleep(6000);
-        nextButton.click();
+        nextButton.scrollTo().click();
+
     }
 }

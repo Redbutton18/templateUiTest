@@ -22,6 +22,7 @@ public class ProductPage extends BasePage {
         sleep(1000);
         plusItemNumberButton.shouldBe(visible).click();
         goToCartButton.click();
+        sleep(1000);
         approveGoToCartButton.shouldBe(visible).click();
 
     }
