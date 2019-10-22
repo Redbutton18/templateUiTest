@@ -6,7 +6,6 @@ import io.qameta.allure.Step;
 public class Steps {
     private static BasePage basePage = new BasePage();
     private static CartPage cartPage = new CartPage();
-    private static ClientPage clientPage = new ClientPage();
     private static ProductPage productPage = new ProductPage();
     private static SearchPage searchPage = new SearchPage();
 
