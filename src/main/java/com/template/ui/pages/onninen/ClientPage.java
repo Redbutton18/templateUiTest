@@ -5,7 +5,6 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import lombok.Getter;
 import lombok.experimental.Accessors;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -25,10 +24,10 @@ public class ClientPage extends BasePage{
     public SelenideElement acceptPersonalDataCheckbox = $("input#accept_proc_person_data.Checkbox__input");
     public SelenideElement nextButton = $("button[class=\"Button__btn Button__breakable Button__style-danger\"]");
 
-    public SelenideElement nonCorrectUserDataMessage = $x("//*[contains(text(), 'Formularz adresowy nie został prawidłowo wypełniony. Prosimy o poprawienie danych.')]");
-    public SelenideElement emptyPhoneNumberError = $x("//*[contains(text(), 'Podaj wymaganą wartość')]");
-    public SelenideElement emptyEmailError = $x("//*[contains(text(), 'Podany email jest za krótki. Email musi mieć od 6 do 64 znaków.')]");
-    public SelenideElement uncheckedPersonalDataCheckboxError = $x("//*[contains(text(), 'W celu złożenia zamówienia prosimy o akceptację regulaminu')]");
+    public SelenideElement nonCorrectUserDataMessage = $x("//div[@id='messenger']/ul[2]/li");
+    public SelenideElement emptyPhoneNumberError = $x("//div[input[@id='prs_phone']]/../div[contains(@class, 'FormElement__error')]");
+    public SelenideElement emptyEmailError = $x("//div[input[@id='prs_email']]/../div[contains(@class, 'FormElement__error')]");
+    public SelenideElement uncheckedPersonalDataCheckboxError = $x("//div[input[@name=\"accept_proc_person_data\"]]/../div[contains(@class, 'FormElement__error')]");
 
     @Step
     public void enterCorrectClientData() {

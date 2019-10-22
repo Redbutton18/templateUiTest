@@ -32,6 +32,7 @@ public class UITests extends BaseTest {
         searchPage.chooseProduct();
 
         //IncreaseProductNumberAndGotoTheCart
+        sleep(1000);
         productPage.addProductToTheCart();
 
         //verify cart content
