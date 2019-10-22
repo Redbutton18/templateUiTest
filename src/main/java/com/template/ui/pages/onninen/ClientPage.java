@@ -5,7 +5,6 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import lombok.Getter;
 import lombok.experimental.Accessors;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.*;
 
