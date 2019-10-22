@@ -13,7 +13,7 @@ public class Steps {
 
     @Step("Choose and add product to cart go to the client page")
     public static void addProductToCartAndGoToClientPage() {
-        basePage.productSearch("Oświetlenie");
+        basePage.productSearch("Oswietlenie");
         searchPage.clickOnSearchItem(2);
         searchPage.chooseProduct();
         productPage.addProductToTheCart();
