@@ -20,7 +20,6 @@ public class SearchPage extends BasePage{
     @Step
     public void clickOnSearchItem(int index){
         searchItem.get(index).click();
-        
     }
 
     @Step
