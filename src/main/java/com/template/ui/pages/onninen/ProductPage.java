@@ -19,7 +19,7 @@ public class ProductPage extends BasePage {
 
     @Step
     public void addProductToTheCart() {
-        sleep(1000);
+        sleep(2000);
         plusItemNumberButton.shouldBe(visible).click();
         goToCartButton.click();
         sleep(1000);

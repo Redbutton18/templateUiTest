@@ -47,7 +47,7 @@ public class UITests extends BaseTest {
     public void testAddProductLeaveEmptyClientDataRequiredFields() {
         steps.addProductToCartAndGoToClientPage();
         clientPage.enterNonCorrectClientData();
-        sleep(3000);
+        sleep(1000);
         clientPage.nonCorrectUserDataMessage.shouldBe(Condition.visible);
         clientPage.emptyPhoneNumberError.shouldBe(Condition.visible);
         clientPage.emptyEmailError.shouldBe(Condition.visible);
