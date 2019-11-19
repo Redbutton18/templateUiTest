@@ -31,7 +31,6 @@ public class ClientPage extends BasePage{
 
     @Step
     public void enterCorrectClientData() {
-        sleep(1000);
         clientPageHeader.shouldHave(Condition.text(String.format("Dane klienta")));
         nameField.setValue("Asdsf");
         surnameField.setValue("Ssfgdffg");
@@ -46,7 +45,6 @@ public class ClientPage extends BasePage{
 
     @Step
     public void enterNonCorrectClientData() {
-        sleep(1000);
         clientPageHeader.shouldHave(Condition.text(String.format("Dane klienta")));
         nameField.setValue("Asdsf");
         surnameField.setValue("Ssfgdffg");

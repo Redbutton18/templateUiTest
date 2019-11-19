@@ -18,7 +18,7 @@ public class BaseTest {
     public void setup(){
         Configuration.browser =  "chrome";
         Configuration.startMaximized = true;
-        Configuration.timeout =  5000;
+        Configuration.timeout =  10000;
         Configuration.reportsFolder = "target/test-result/reports";
     }
 

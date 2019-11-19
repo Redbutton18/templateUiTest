@@ -23,7 +23,7 @@ public class CartPage extends BasePage{
 
     @Step
     public void verifyCartContent(String quantity) {
-        sleep(2000);
+        productQuantityField.shouldBe(Condition.visible);
         String itemQuantity = productQuantityField.getValue();
         cartTitle.shouldHave(Condition.text(String.format("Koszyk")));
         assertThat(itemQuantity).isEqualTo(quantity);

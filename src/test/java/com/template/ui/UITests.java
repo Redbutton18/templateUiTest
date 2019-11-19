@@ -32,7 +32,6 @@ public class UITests extends BaseTest {
         searchPage.chooseProduct();
 
         //IncreaseProductNumberAndGotoTheCart
-        sleep(1000);
         productPage.addProductToTheCart();
 
         //verify cart content
@@ -48,7 +47,6 @@ public class UITests extends BaseTest {
     public void testAddProductLeaveEmptyClientDataRequiredFields() {
         steps.addProductToCartAndGoToClientPage();
         clientPage.enterNonCorrectClientData();
-        sleep(1000);
         clientPage.nonCorrectUserDataMessage.shouldBe(Condition.visible);
         clientPage.emptyPhoneNumberError.shouldBe(Condition.visible);
         clientPage.emptyEmailError.shouldBe(Condition.visible);
