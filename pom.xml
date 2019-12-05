@@ -12,6 +12,7 @@
         <java.version>1.8</java.version>
         <aspectj.version>1.8.10</aspectj.version>
         <allure-testng.version>2.9.0</allure-testng.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
