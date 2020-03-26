@@ -19,6 +19,7 @@ public class BasePage {
     private SelenideElement categoryDropdownMenu = $("select[id=\"instant-search-category-input\"]");
     private SelenideElement productyLabel = $("div.Menu__item-inner a[title=\"Produkty\"]");
     private SelenideElement energetykaLabel = $("a.kat-glowna[title=\"Energetyka\"]");
+    private SelenideElement weciejKontaktowLink = $("a.wiecej-kontakt");
 
 
     @Step
@@ -30,5 +31,10 @@ public class BasePage {
     public void openCategoryMenuChooseCategory() {
         productyLabel.hover();
         energetykaLabel.click();
+    }
+
+    @Step
+    public void clickWeciejKontaktowLink(){
+        weciejKontaktowLink.scrollTo().click();
     }
 }

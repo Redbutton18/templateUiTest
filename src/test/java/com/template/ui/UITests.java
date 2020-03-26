@@ -6,7 +6,9 @@ import com.template.ui.steps.Steps;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.clearBrowserCookies;
+import static com.codeborne.selenide.Selenide.open;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class UITests extends BaseTest {
 
@@ -15,6 +17,7 @@ public class UITests extends BaseTest {
     private ClientPage clientPage = new ClientPage();
     private ProductPage productPage = new ProductPage();
     private SearchPage searchPage = new SearchPage();
+    private ContactPage contactPage = new ContactPage();
     private Steps steps = new Steps();
 
     @BeforeMethod
@@ -58,5 +61,18 @@ public class UITests extends BaseTest {
     public void testValidateCategoryName() {
         basePage.openCategoryMenuChooseCategory();
         searchPage.categoryNameHeader.shouldHave(Condition.text(String.format("Energetyka")));
+    }
+
+    @Test(description = "Go to additional contact page and check data")
+    public void testCheckAdditionalContactPageData(){
+        basePage.clickWeciejKontaktowLink();
+        String ADDRESS = "ul. Emaliowa 28" + "\n" + "02-295 Warszawa" + "\n" + "NIP: 526-10-32-852" + "\n" + "Regon: 11177922";
+        assertThat(contactPage.contactHeader.getText()).isEqualTo("Kontakt");
+        assertThat(contactPage.mainCompanyAddress.getText()).isEqualTo(ADDRESS);
+        assertThat(contactPage.telephonSekretariat.getText()).isEqualTo("22 567 90 00");
+        assertThat(contactPage.faxSekretariat.getText()).isEqualTo("22 567 90 09");
+        assertThat(contactPage.openHoursSekretariat.getText()).isEqualTo("pn. - pt. 8:00 - 16:00");
+        assertThat(contactPage.emailSekretariat.getText()).isEqualTo("info@onninen.pl");
+
     }
 }
