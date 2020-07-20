@@ -31,7 +31,7 @@ public class UITests extends BaseTest {
         basePage.productSearch("filter");
 
         //choose product from list
-        searchPage.clickOnSearchItem(2);
+        searchPage.clickOnSearchItem(3);
         searchPage.chooseProduct();
 
         //IncreaseProductNumberAndGotoTheCart
@@ -57,22 +57,21 @@ public class UITests extends BaseTest {
         basePage.companyLogo().click();
     }
 
-    @Test(description = "Positive test choose some category validate category name")
-    public void testValidateCategoryName() {
-        basePage.openCategoryMenuChooseCategory();
-        searchPage.categoryNameHeader.shouldHave(Condition.text(String.format("Energetyka")));
-    }
+//    @Test(description = "Positive test choose some category validate category name")
+//    public void testValidateCategoryName() {
+//        basePage.openCategoryMenuChooseCategory();
+//        searchPage.categoryNameHeader.shouldHave(Condition.text(String.format("Energetyka")));
+//    }
 
-    @Test(description = "Go to additional contact page and check data")
-    public void testCheckAdditionalContactPageData(){
-        basePage.clickWeciejKontaktowLink();
-        String ADDRESS = "ul. Emaliowa 28" + "\n" + "02-295 Warszawa" + "\n" + "NIP: 526-10-32-852" + "\n" + "Regon: 11177922";
-        assertThat(contactPage.contactHeader.getText()).isEqualTo("Kontakt");
-        assertThat(contactPage.mainCompanyAddress.getText()).isEqualTo(ADDRESS);
-        assertThat(contactPage.telephonSekretariat.getText()).isEqualTo("22 567 90 00");
-        assertThat(contactPage.faxSekretariat.getText()).isEqualTo("22 567 90 09");
-        assertThat(contactPage.openHoursSekretariat.getText()).isEqualTo("pn. - pt. 8:00 - 16:00");
-        assertThat(contactPage.emailSekretariat.getText()).isEqualTo("info@onninen.pl");
-
-    }
+//    @Test(description = "Go to additional contact page and check data")
+//    public void testCheckAdditionalContactPageData(){
+//        basePage.clickWeciejKontaktowLink();
+//        String ADDRESS = "ul. Emaliowa 28" + "\n" + "02-295 Warszawa" + "\n" + "NIP: 526-10-32-852" + "\n" + "Regon: 11177922";
+//        assertThat(contactPage.contactHeader.getText()).isEqualTo("Kontakt");
+//        assertThat(contactPage.mainCompanyAddress.getText()).isEqualTo(ADDRESS);
+//        assertThat(contactPage.telephonSekretariat.getText()).isEqualTo("22 567 90 00");
+//        assertThat(contactPage.faxSekretariat.getText()).isEqualTo("22 567 90 09");
+//        assertThat(contactPage.openHoursSekretariat.getText()).isEqualTo("pn. - pt. 8:00 - 16:00");
+//        assertThat(contactPage.emailSekretariat.getText()).isEqualTo("info@onninen.pl");
+//    }
 }
